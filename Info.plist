@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+  <!-- ─── Meta Wearables: URL callback scheme ─── -->
+  <!-- Replace "raybanmemory" with your actual app scheme -->
+  <key>CFBundleURLTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleTypeRole</key>
+      <string>Editor</string>
+      <key>CFBundleURLName</key>
+      <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>raybanmemory</string>
+      </array>
+    </dict>
+  </array>
+
+  <!-- ─── Allow the Meta AI app to be opened ─── -->
+  <key>LSApplicationQueriesSchemes</key>
+  <array>
+    <string>fb-viewapp</string>
+  </array>
+
+  <!-- ─── External Accessory (MFi) protocol for glasses ─── -->
+  <key>UISupportedExternalAccessoryProtocols</key>
+  <array>
+    <string>com.meta.ar.wearable</string>
+  </array>
+
+  <!-- ─── Background modes for BT audio + accessory ─── -->
+  <key>UIBackgroundModes</key>
+  <array>
+    <string>bluetooth-peripheral</string>
+    <string>external-accessory</string>
+    <string>audio</string>
+  </array>
+
+  <!-- ─── Privacy usage strings ─── -->
+  <key>NSBluetoothAlwaysUsageDescription</key>
+  <string>RayBan Memory needs Bluetooth to connect to your Meta glasses.</string>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>RayBan Memory records audio from your glasses microphone to transcribe and save memories.</string>
+  <key>NSCameraUsageDescription</key>
+  <string>RayBan Memory streams video from your glasses camera.</string>
+
+  <!-- ─── Meta Wearables SDK config ─── -->
+  <!-- Use MetaAppID = "0" in Developer Mode; replace with your real ID for production -->
+  <key>MWDAT</key>
+  <dict>
+    <key>AppLinkURLScheme</key>
+    <string>raybanmemory://</string>
+    <key>MetaAppID</key>
+    <string>0</string>
+  </dict>
+
+</dict>
+</plist>
