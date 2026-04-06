@@ -38,7 +38,7 @@ Ray-Ban Meta Glasses
 ### 1. Clone and open in Xcode
 
 ```bash
-git clone [<your-repo>](https://github.com/javda4/Meta_Glasses_Interview_Tool.git)
+git clone https://github.com/javda4/Meta_Glasses_Interview_Tool.git
 open RayBanMemoryApp/RayBanMemoryApp.xcodeproj
 ```
 
